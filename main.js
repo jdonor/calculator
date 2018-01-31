@@ -1,3 +1,10 @@
+const operators = Object.freeze({
+    ADD: '+',
+    SUBTRACT: '-',
+    MULTIPLY: '*',
+    DIVIDE: '/',
+});
+
 function add(a, b) {
     return a + b;
 }
@@ -16,16 +23,16 @@ function divide(a, b) {
 
 function operate(a, operator, b) {
     switch (operator) {
-        case '+':
+        case operators.ADD:
             return add(a, b);
             break;
-        case '-':
+        case operators.SUBTRACT:
             return subtract(a, b);
             break;
-        case '*':
+        case operators.MULTIPLY:
             return multiply(a, b);
             break;
-        case '/':
+        case operators.DIVIDE:
             return divide(a, b);
             break;
     }

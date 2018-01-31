@@ -4,8 +4,9 @@ body {
 }
 
 button {
-    padding: 30px;
     font-size: 1em;
+    width: 100px;
+    height: 100px;
 }
 
 #container {

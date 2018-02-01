@@ -46,6 +46,11 @@ function operate(a, operator, b) {
     }
 }
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('click', buttonClicked);
+});
+
 function buttonClicked() {
     let buttonText = this.textContent;
 
@@ -104,10 +109,3 @@ function clear() {
 
     refreshDisplay();
 }
-
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('click', buttonClicked);
-});
-
-refreshDisplay();

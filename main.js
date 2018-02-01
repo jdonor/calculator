@@ -30,20 +30,22 @@ function divide(a, b) {
 }
 
 function operate(a, operator, b) {
+    let result;
     switch (operator) {
         case operators.ADD:
-            return add(a, b);
+            result = add(a, b);
             break;
         case operators.SUBTRACT:
-            return subtract(a, b);
+            result = subtract(a, b);
             break;
         case operators.MULTIPLY:
-            return multiply(a, b);
+            result = multiply(a, b);
             break;
         case operators.DIVIDE:
-            return divide(a, b);
+            result = divide(a, b);
             break;
     }
+    return result.toString();
 }
 
 const buttons = document.querySelectorAll('button');

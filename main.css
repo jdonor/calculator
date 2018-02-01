@@ -7,6 +7,13 @@ button {
     font-size: 1em;
     width: 100px;
     height: 100px;
+    border-radius: 30%;
+    border: none;
+    opacity: .9;
+}
+
+button:hover {
+    opacity: 1;
 }
 
 #container {
@@ -37,6 +44,10 @@ button {
 }
 
 /* Numbers */
+
+.number button {
+    background: #93b993;
+}
 
 #one {
     grid-area: one;
@@ -104,4 +115,9 @@ button {
 
 #equals {
     grid-area: equals;
+}
+
+#equals button {
+    background: #2420f3;
+    color: #fff;
 }

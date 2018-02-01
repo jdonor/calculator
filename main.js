@@ -72,7 +72,11 @@ function numberClicked(number) {
 }
 
 function operatorClicked(operator) {
-    if (calculation.a) {
+    if (calculation.b) {
+        calculation.a = operate(+calculation.a, calculation.operator, +calculation.b);
+        calculation.b = '';
+        calculation.operator = operator;
+    } else if (calculation.a) {
         calculation.operator = operator;
     }
 

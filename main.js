@@ -63,9 +63,9 @@ function buttonClicked() {
 function numberClicked(number) {
     number = +number;
     if (calculation.operator) {
-        calculation.b += number;
+        calculation.b += number.toString();
     } else {
-        calculation.a += number;
+        calculation.a += number.toString();
     }
 
     refreshDisplay();
@@ -81,7 +81,7 @@ function operatorClicked(operator) {
 
 function equalsClicked() {
     if (calculation.b) {
-        calculation.a = operate(calculation.a, calculation.operator, calculation.b);
+        calculation.a = operate(+calculation.a, calculation.operator, +calculation.b);
         calculation.b = '';
         calculation.operator = '';
 
